@@ -18,7 +18,8 @@
 
 #-------------------------------Key Analysis-----------------------------#
 
-# time complexity:
+# time complexity:{ no of swap [n(n-1)/2)] + no of comparisons[n(n-1)/2)] }
+
 #               (Worst case): O(n**2)        -- list is sorted in descending order.
 #               (Best case) : O(n)           -- list is already sorted.
 #               (Avg case)  : O(n**2)
@@ -26,12 +27,13 @@
 # space complexity:
 #               (worst case): O(1)
 
-# Stable Algorithms
-# Adaptable (after applying Flag)
+# Stable Algorithms: Yes
+# Adaptive: Yes (after applying Flag)
 
-# Application:
+#       Note:
 #           1. In Nth pass we get Nth largest element in sorted position.
-#           2. 
+#           2. No of pass requires n-1.
+#           3. 
 
 #-------------------------------Bubble Sort Code Start-----------------------------#
 
@@ -54,24 +56,27 @@ def Bubble_sort(arr:list)->list:
 
 
 
-# 2 Selection sort
+# 2. Selection sort
 
 #-------------------------------Key Analysis-----------------------------#
 
-# time complexity:
-#               (Worst case): O(n**2)        -- list is sorted in descending order.
-#               (Best case) : O(n)           -- list is already sorted.
+# time complexity:{ no of swap (n-1) + no of comparisons[n(n-1)/2)]}
+
+#               (Worst case): O(n**2)     
+#               (Best case) : O(n**2)           
 #               (Avg case)  : O(n**2)
 
 # space complexity:
 #               (worst case): O(1)
 
-# Stable Algorithms
-# Adaptable (after applying Flag)
+# Stable Algorithms: No
+# Adaptive : No
 
-# Application:
+#       Note:
 #           1. Inplace sort Algorithms(no extra space required).
-#           2. 
+#           2. it requires min swapping.
+#           3. In Kth pass we will get Kth shortest element.
+#           4. No of pass requires n-1.
 
 #-------------------------------Selection Sort Code Start-----------------------------#
 
@@ -93,6 +98,45 @@ def Selection_sort(arr:list)->list:
 
 
 
+# 2. Insertion sort
+
+#-------------------------------Key Analysis-----------------------------#
+
+# time complexity:{ no of swap (n-1) + no of comparisons[n(n-1)/2)]}
+
+#               (Worst case): O(n**2)     
+#               (Best case) : O(n**2)           
+#               (Avg case)  : O(n**2)
+
+# space complexity:
+#               (worst case): O(1)
+
+# Stable Algorithms: Yes
+# Adaptive:Yes 
+
+#       Note:
+#           1. Useful for Linked List.
+#           2. It divides array in two parts.(sorted and unsorted)
+#           3. No of pass requires n-1.
+#           4. 
+
+#-------------------------------Insertion Sort Code Start-----------------------------#
+
+def Insertion_sort(arr:list)->list:
+    n=len(arr)
+    for i in range(1,n):
+        j=i-1
+        key =arr[i]
+        while (j>=0 & arr[j]>arr[i]):
+            arr[j+1]=arr[j]
+            j-=1
+        arr[j+1]=key
+    return arr
+
+#-------------------------------Insertion Sort Code End-----------------------------#
+
+
+
 
 
 
@@ -110,4 +154,7 @@ if __name__=='__main__':
     print()
     print("array after applying Selection sort: ")
     print(Selection_sort(arr))
+    print()
+    print("array after applying Insertion sort: ")
+    print(Insertion_sort(arr))
     print()
