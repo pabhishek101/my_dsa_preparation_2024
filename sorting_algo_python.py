@@ -98,11 +98,11 @@ def Selection_sort(arr:list)->list:
 
 
 
-# 2. Insertion sort
+# 3. Insertion sort
 
 #-------------------------------Key Analysis-----------------------------#
 
-# time complexity:{ no of swap (n-1) + no of comparisons[n(n-1)/2)]}
+# time complexity: {no of swap [n(n-1)/2)] + no of comparisons[n(n-1)/2)] }
 
 #               (Worst case): O(n**2)     
 #               (Best case) : O(n**2)           
@@ -118,7 +118,6 @@ def Selection_sort(arr:list)->list:
 #           1. Useful for Linked List.
 #           2. It divides array in two parts.(sorted and unsorted)
 #           3. No of pass requires n-1.
-#           4. 
 
 #-------------------------------Insertion Sort Code Start-----------------------------#
 
