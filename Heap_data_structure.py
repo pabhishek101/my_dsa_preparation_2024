@@ -1,3 +1,12 @@
+#---------------Time Complexity-------------------------#
+# To insert Singe element in Heap:    O(logn)
+# To delete Single element from Heap: O(logn)
+# Given array of element to heapify:  O(n)
+# To build heap with n elements:      O(nlogn)
+
+
+
+
 class Heap:
     def __init__(self):
         self.heap=[]
