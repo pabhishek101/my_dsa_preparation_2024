@@ -118,6 +118,7 @@ def Selection_sort(arr:list)->list:
 #           1. Useful for Linked List.
 #           2. It divides array in two parts.(sorted and unsorted)
 #           3. No of pass requires n-1.
+#           3. Data is partially sorted.
 
 #-------------------------------Insertion Sort Code Start-----------------------------#
 
@@ -133,6 +134,80 @@ def Insertion_sort(arr:list)->list:
     return arr
 
 #-------------------------------Insertion Sort Code End-----------------------------#
+
+
+# 4. Merge sort
+
+#-------------------------------Key Analysis-----------------------------#
+
+# time complexity: {no of swap [n(n-1)/2)] + no of comparisons[n(n-1)/2)] }
+
+#               (Worst case): O(n**2)     
+#               (Best case) : O(n**2)           
+#               (Avg case)  : O(n**2)
+
+# space complexity:
+#               (worst case): O(1)
+
+# Stable Algorithms: Yes
+# Adaptive:Yes 
+
+#       Note:
+#           1. Useful for Linked List.
+#           2. It divides array in two parts.(sorted and unsorted)
+#           3. No of pass requires n-1.
+
+#-------------------------------Merge Sort Code Start-----------------------------#
+
+def Merge_sort(arr:list)->list:
+    n=len(arr)
+    for i in range(1,n):
+        j=i-1
+        key =arr[i]
+        while (j>=0 & arr[j]>arr[i]):
+            arr[j+1]=arr[j]
+            j-=1
+        arr[j+1]=key
+    return arr
+
+#-------------------------------Merge Sort Code End-----------------------------#
+
+
+# 4. Shell sort
+
+#-------------------------------Key Analysis-----------------------------#
+
+# time complexity: {no of swap [n(n-1)/2)] + no of comparisons[n(n-1)/2)] }
+
+#               (Worst case): O(n**2)     
+#               (Best case) : O(n**2)           
+#               (Avg case)  : O(n**2)
+
+# space complexity:
+#               (worst case): O(1)
+
+# Stable Algorithms: Yes
+# Adaptive:Yes 
+
+#       Note:
+#           1. Useful for Linked List.
+#           2. It divides array in two parts.(sorted and unsorted)
+#           3. No of pass requires n-1.
+
+#-------------------------------Shell Sort Code Start-----------------------------#
+
+def Shell_sort(arr:list)->list:
+    n=len(arr)
+    for i in range(1,n):
+        j=i-1
+        key =arr[i]
+        while (j>=0 & arr[j]>arr[i]):
+            arr[j+1]=arr[j]
+            j-=1
+        arr[j+1]=key
+    return arr
+
+#-------------------------------Shell Sort Code End-----------------------------#
 
 
 
